@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root "groups#index"
 
   resources :groups do
-    resources :posts
+    resources :posts, except: [:show, :index]
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
